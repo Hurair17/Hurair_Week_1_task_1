@@ -41,11 +41,12 @@ class _BuyTicketState extends State<BuyTicket> {
             Positioned(
               top: 200,
               child: Container(
+                padding: EdgeInsets.only(left: 12, right: 12),
                 decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30))),
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20))),
                 width: 360,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
