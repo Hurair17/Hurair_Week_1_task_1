@@ -3,6 +3,13 @@ import 'package:task_11/core/constant/color_define.dart';
 import 'package:task_11/core/widgets/Cards.dart';
 import 'package:task_11/core/widgets/text_widget.dart';
 
+Text textfun(String tx, Color? col, double size) {
+  return Text(
+    tx,
+    style: TextStyle(color: col, fontSize: size),
+  );
+}
+
 class TopVisited extends StatefulWidget {
   const TopVisited({Key? key}) : super(key: key);
 
@@ -11,17 +18,13 @@ class TopVisited extends StatefulWidget {
 }
 
 class _TopVisitedState extends State<TopVisited> {
+  double size = 15;
   @override
   Widget build(BuildContext context) {
     return Material(
       child: DefaultTabController(
         length: 5,
         child: Scaffold(
-          // appBar: AppBar(
-          //   bottom:
-
-          // ),
-
           body: SafeArea(
             // child: MaterialApp(
 
@@ -55,25 +58,20 @@ class _TopVisitedState extends State<TopVisited> {
                   isScrollable: true,
                   tabs: [
                     Tab(
-                        child: Text('Top Visited',
-                            style: TextStyle(color: green, fontSize: 15))),
+                      child: textfun('Top Visited', green, size),
+                    ),
                     Tab(
-                        child: Text(
-                      'Art',
-                      style: TextStyle(color: yellow, fontSize: 15),
-                    )),
-                    const Tab(
-                        child: Text('History',
-                            style:
-                                TextStyle(color: Colors.purple, fontSize: 15))),
+                      child: textfun('Art', yellow, size),
+                    ),
                     Tab(
-                        child: Text('Military',
-                            style: TextStyle(
-                                color: Colors.green[300], fontSize: 15))),
+                      child: textfun('History', Colors.purple, size),
+                    ),
                     Tab(
-                        child: Text('Science',
-                            style: TextStyle(
-                                color: Colors.blue[300], fontSize: 15))),
+                      child: textfun('Military', green, size),
+                    ),
+                    Tab(
+                      child: textfun('Science', Colors.blue[300], size),
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -88,32 +86,22 @@ class _TopVisitedState extends State<TopVisited> {
                         ],
                       ),
                       Center(
-                        child: Text('Art Page',
-                            style: TextStyle(
-                                color: Colors.yellow[300], fontSize: 30)),
+                        child: textfun('Art Page', black, 40),
                       ),
                       Center(
                         child: Text('History',
                             style: TextStyle(
-                                color: Colors.purple[300], fontSize: 30)),
+                                color: Colors.purple[300], fontSize: 40)),
                       ),
                       Center(
-                        child: Text('Military',
-                            style: TextStyle(
-                                color: Colors.green[300], fontSize: 30)),
+                        child: textfun('Military', Colors.green[300], 40),
                       ),
                       Center(
-                        child: Text('Science',
-                            style: TextStyle(
-                                color: Colors.blue[300], fontSize: 30)),
+                        child: textfun('Science', Colors.blue[300], 40),
                       )
                     ],
                   ),
                 ),
-                // const TopVisitCard(),
-                // const TopVisitCard(),
-                // const TopVisitCard(),
-                // const TopVisitCard(),
               ],
             ),
           ),
