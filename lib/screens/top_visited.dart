@@ -26,10 +26,9 @@ class _TopVisitedState extends State<TopVisited> {
         length: 5,
         child: Scaffold(
           body: SafeArea(
-            // child: MaterialApp(
-
             child: ListView(
               children: [
+                //Top Visited Page design Top
                 Row(
                   children: [
                     Container(
@@ -53,6 +52,8 @@ class _TopVisitedState extends State<TopVisited> {
                     ),
                   ],
                 ),
+
+                //tabbar Options
                 TabBar(
                   // indicatorSize: TabBarIndicatorSize.tab,
                   isScrollable: true,
@@ -74,8 +75,11 @@ class _TopVisitedState extends State<TopVisited> {
                     ),
                   ],
                 ),
+
+                // For TabbarView
                 SizedBox(
                   height: 600,
+                  //tabbar Pages to be view
                   child: TabBarView(
                     children: [
                       ListView(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// For Displaying text
 class TextWidget extends StatelessWidget {
   final String text;
   final FontWeight? fontWeight;
@@ -27,6 +28,7 @@ class TextWidget extends StatelessWidget {
   }
 }
 
+//for Input TextField
 class TxtFormField extends StatelessWidget {
   final String? hintText;
   final bool obscureText;

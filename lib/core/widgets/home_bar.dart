@@ -13,6 +13,7 @@ class _HomeBarState extends State<HomeBar> {
   String? dropdownvalue = 'Warszawa';
   @override
   Widget build(BuildContext context) {
+    print('object');
     return Material(
       child: SafeArea(
         // child: MaterialApp(

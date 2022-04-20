@@ -2,6 +2,7 @@ import 'package:task_11/core/constant/color_define.dart';
 import 'package:task_11/core/widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 
+// Card for HomePage Horizontal Scroll
 class Card1 extends StatelessWidget {
   const Card1({Key? key}) : super(key: key);
 
@@ -101,6 +102,7 @@ class Card1 extends StatelessWidget {
   }
 }
 
+// Card for HomePage Verticle Scroll
 class Card2 extends StatelessWidget {
   const Card2({Key? key}) : super(key: key);
 
@@ -203,6 +205,7 @@ class Card2 extends StatelessWidget {
   }
 }
 
+//Card for TopVisitedPage
 class TopVisitCard extends StatelessWidget {
   const TopVisitCard({Key? key}) : super(key: key);
 
@@ -301,6 +304,7 @@ class TopVisitCard extends StatelessWidget {
   }
 }
 
+//Card for Ticket Page
 class Card4 extends StatelessWidget {
   const Card4({Key? key}) : super(key: key);
 

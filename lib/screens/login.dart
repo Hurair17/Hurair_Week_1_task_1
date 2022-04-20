@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_11/core/constant/color_define.dart';
 import 'package:task_11/core/widgets/text_widget.dart';
-import 'package:task_11/screens/botoom_nav_bar.dart';
+import 'package:task_11/screens/root_screen.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -71,8 +71,9 @@ class Login extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 80),
+
+              //Elevated Login Button
               Center(
-                // alignment: Alignment.center,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: offWhite,

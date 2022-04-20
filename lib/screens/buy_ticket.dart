@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task_11/core/constant/color_define.dart';
 import 'package:task_11/core/widgets/Cards.dart';
 import 'package:task_11/core/widgets/text_widget.dart';
-import 'package:task_11/screens/botoom_nav_bar.dart';
+import 'package:task_11/screens/root_screen.dart';
 
 class BuyTicket extends StatefulWidget {
   const BuyTicket({Key? key}) : super(key: key);
@@ -12,6 +12,7 @@ class BuyTicket extends StatefulWidget {
 }
 
 class _BuyTicketState extends State<BuyTicket> {
+  // List of Days
   var items = [
     'Sunday',
     'Monday',
@@ -20,7 +21,7 @@ class _BuyTicketState extends State<BuyTicket> {
     'Friday',
     'Saturday'
   ];
-  String? dropdownvalue = 'Sunday';
+  String? dropdownvalue = 'Sunday'; // intial day is sunday
   String txt =
       'It is a historical Museum which presents the 100 years useum which presents the 100 years of jeweish life in the polish lands. It is also a place of ';
 
@@ -31,6 +32,7 @@ class _BuyTicketState extends State<BuyTicket> {
         height: MediaQuery.of(context).size.height,
         child: Stack(
           children: [
+            //Background image of stack
             SizedBox(
               height: 300,
               child: Image.asset(
@@ -38,10 +40,12 @@ class _BuyTicketState extends State<BuyTicket> {
                 fit: BoxFit.fill,
               ),
             ),
+
+            // Stcke Widget Different Position for Widgets
             Positioned(
               top: 200,
               child: Container(
-                padding: EdgeInsets.only(left: 12, right: 12),
+                padding: const EdgeInsets.only(left: 12, right: 12),
                 decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -54,6 +58,8 @@ class _BuyTicketState extends State<BuyTicket> {
                   children: [
                     SizedBox(
                       height: 440,
+
+                      // ListView for all the portion to scroll
                       child: ListView(
                         children: [
                           Padding(
@@ -186,9 +192,14 @@ class _BuyTicketState extends State<BuyTicket> {
                           const Card4(),
                           const Card4(),
                           const Card4(),
+                          const Card4(),
+                          const Card4(),
+                          const Card4(),
                         ],
                       ),
                     ),
+
+                    // Container for Elevated Button
                     Container(
                       padding: const EdgeInsets.only(top: 10),
                       alignment: Alignment.center,
