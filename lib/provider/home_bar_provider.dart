@@ -4,8 +4,11 @@ class HomeBarProvider with ChangeNotifier {
   var items = ['Warszawa', 'Peshawar', 'Lahore'];
   String? dropdownvalue = 'Warszawa';
 
-  String setValue(int value) {
+  void setValue(int value) {
     print(items[value]);
-    return items[value];
+    // return items[value];
+    dropdownvalue = items[value];
+
+    notifyListeners();
   }
 }

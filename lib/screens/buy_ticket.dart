@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:task_11/core/constant/color_define.dart';
 import 'package:task_11/core/widgets/Cards.dart';
 import 'package:task_11/core/widgets/text_widget.dart';
+import 'package:task_11/provider/buy_ticket_provider.dart';
 import 'package:task_11/screens/root_screen.dart';
 
 class BuyTicket extends StatefulWidget {
@@ -157,7 +159,9 @@ class _BuyTicketState extends State<BuyTicket> {
                                             height: 15,
                                             child: DropdownButtonHideUnderline(
                                               child: DropdownButton(
-                                                value: dropdownvalue,
+                                                value: context
+                                                    .watch<BuyTicketProvider>()
+                                                    .dropdownvalue,
                                                 items:
                                                     items.map((String items) {
                                                   return DropdownMenuItem(
@@ -166,9 +170,16 @@ class _BuyTicketState extends State<BuyTicket> {
                                                   );
                                                 }).toList(),
                                                 onChanged: (String? newValue) {
-                                                  setState(() {
-                                                    dropdownvalue = newValue;
-                                                  });
+                                                  // setState(() {
+                                                  //   dropdownvalue = newValue;
+                                                  // });
+                                                  String newstr =
+                                                      newValue ?? 'Sunday';
+                                                  int index =
+                                                      items.indexOf(newstr);
+                                                  context
+                                                      .read<BuyTicketProvider>()
+                                                      .setDay(index);
                                                 },
                                                 style: const TextStyle(
                                                   color: grey,
